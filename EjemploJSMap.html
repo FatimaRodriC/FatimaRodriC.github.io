@@ -1,0 +1,23 @@
+<html>
+    <body>
+
+        <script>
+
+        
+        const mapa1 = new Map([
+        ["computer", "ordenador"],
+        ["laptop", "portatil"],
+        ["keyword", "teclado"],
+        ["mouse", "raton"],
+        ["database", "base de datos"]
+
+        ])
+        
+        
+        
+        const palabra = prompt("Introduce palabra: ");
+        document.write("La traduccion de " + palabra +" es: " + mapa1.get(palabra));
+        console.log(mapa1.size);
+        </script>
+    </body>
+</html>
