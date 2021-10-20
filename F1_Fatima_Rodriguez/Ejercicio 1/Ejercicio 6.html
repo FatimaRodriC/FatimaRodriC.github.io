@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            let nota1=prompt("La primera nota es: ");
+            nota1=parseInt(nota1);
+            let nota2=prompt("La segunda nota es: ");
+            nota2=parseInt(nota2);
+            let nota3=prompt("La tercera nota es: ");
+            nota3=parseInt(nota3);
+            let suma;
+            let promedio;
+
+            suma=nota1+nota2+nota3;
+            document.write(suma);
+            promedio=suma/3;
+            
+            if(promedio>=7){
+                alert("Promocionado");
+            }else
+            if(promedio<7){
+                alert("No promocionado");
+            }
+        </script>
+    </body>
+</html>
