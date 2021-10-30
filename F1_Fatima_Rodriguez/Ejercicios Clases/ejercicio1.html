@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script>
+
+        class Alumno {
+            constructor(id, nombre, notaMedia) {
+                this.id = id;
+                this.nombre = nombre;
+                this.notaMedia = notaMedia;
+            }
+
+            modificarNotaMedia(nuevaNota) {
+                this.notaMedia == nuevaNota;
+            }
+
+        }
+
+        class Colegio {
+            constructor(nombre, numeroAulas, nAlumnos) {
+                this.nombre = nombre;
+                this.numeroAulas = numeroAulas;
+                this.ArrayAlumnos = new Array();
+
+                // Creamos alumnos
+            for (let i = 0; i < nAlumnos; i++) {
+                this.ArrayAlumnos[i] = new Alumno(i, "Alumno" + i, 5);
+                this.ArrayAlumnos[i+1] = new Alumno(i+1, "Alumno"+(i+1),4);
+                this.ArrayAlumnos[i+2] = new Alumno(i+2, "Alumno"+(i+2),6);
+                i++;
+                i++;
+            }
+            }
+
+            //Muestra la nota media del alumno especificado
+            mostrarNotaMedia(idAlumno) {
+                let mensaje = "";
+                let i = 0;
+                while (i < this.ArrayAlumnos.length) {
+
+                    if (this.ArrayAlumnos[i].id == idAlumno) {
+
+                        alert("La nota media del alumno " + this.ArrayAlumnos[i].nombre + " tiene de nota media: " + this.ArrayAlumnos[i].notaMedia);
+                        //this.numeroAlumnos[i].notaMedia();
+
+                    }
+                    i++;
+                }
+
+
+            }
+
+            //Modifica la nota media con nuevaNota al alumno especificado
+            modificarNotaMedia(idAlumno, nuevaNota) {
+                let i = 0;
+
+                while (i < this.ArrayAlumnos.length) {
+
+                    if (this.ArrayAlumnos[i].id == idAlumno) {
+
+                        this.ArrayAlumnos[i].notaMedia = nuevaNota;
+                        alert("La nota media del alumno es " + this.ArrayAlumnos[i].notaMedia);
+                        //this.numeroAlumnos[i].notaMedia();
+
+                    }
+                    i++;
+                }
+
+            }
+
+        }
+
+     /*   function creacionAlumno(nAlumnos) {
+            let alumno;
+            for (let i = 0; i < 10; i++) {
+                // Creamos alumnos con id i, nombre Alumnoi y media 5.0
+                alumno = new Alumno(i, "Alumno" + i, 5);
+
+                nAlumnos.push(alumno);
+            }
+
+            alert(nAlumnos.length);
+
+            alert(nAlumnos[9].id + " " + nAlumnos[9].nombre + " " + nAlumnos[9].notaMedia);
+        }*/
+
+        //Muestra el menu
+        function funcionesMenu() {
+            
+       
+            let colegio = new Colegio("colegio", 10, 10);
+            let menu = "";
+
+            let idAlumno = 0;
+
+            while (menu != "c") {
+                menu = prompt("Que quiere hacer con el alumno?: \n" +
+                    "a) Consultar la nota media.\n" +
+                    "b) Cambiar la nota media. \n" +
+                    "c) Finalizar procedimiento.");
+                switch (menu) {
+                    case "a":
+                        idAlumno = parseInt(prompt("De que alumno quiere mostrar la nota media?:"));
+                        colegio.mostrarNotaMedia(idAlumno);
+                        break;
+                    case "b":
+                        idAlumno = parseInt(prompt("De que alumno quiere modificar la nota media?:"));
+                        let nuevaNota = parseInt(prompt("Cual es la nota media?: "));
+
+                        colegio.modificarNotaMedia(idAlumno, nuevaNota);
+
+                        break;
+
+                }
+            }
+        }
+
+
+
+        /*function main() {
+            let colegio = new Colegio("colegio", 10, 10);
+            let menu = (prompt("Que quiere hacer con el alumno?: \n" +
+                "a) Consultar la nota media.\n" +
+                "b) Cambiar la nota media. \n")).toString();
+            colegio.funcionesMenu(menu);
+            return alert("Sea realizado la operacion con exito.");
+
+        }*/
+
+        funcionesMenu();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

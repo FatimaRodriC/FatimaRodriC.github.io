@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class Paciente {
+            constructor(DNI, nombre, enfermedad) {
+                this.DNI = DNI;
+                this.nombre = nombre;
+                this.enfermedad = enfermedad;
+            }
+        }
+
+        class Hospital {
+            constructor(nombre, ciudad, numPacientes) {
+                this.nombre = nombre;
+                this.ciudad = ciudad;
+                this.ArrayPacientes = new Array();
+
+                //Creación de paciente en el ArrayPacientes
+                for (let i = 0; i < numPacientes; i++) {
+                    this.ArrayPacientes[i] = new Paciente(i, "Pepe", "Covid");
+                    this.ArrayPacientes[i + 1] = new Paciente(i + 1, "Lorena", "Apendicitis");
+                    this.ArrayPacientes[i + 2] = new Paciente(i + 2, "Luis", "Covid");
+                    i++;
+                    i++;
+                }
+            }
+
+            //Muestra los pacientes dentro del ArrayPacientes
+            mostrarPacientes() {
+                let i = 1;
+                let respuesta = "Los pacientes son: \n" +
+                    "- Paciente con DNI: " + this.ArrayPacientes[0].DNI +
+                    "\nNombre: " + this.ArrayPacientes[0].nombre +
+                    "\nEnfermedad: " + this.ArrayPacientes[0].enfermedad;
+
+                //Concatena string del primer paciente con todos los demas
+                //y luego los muestra
+                while (i < this.ArrayPacientes.length) {
+                    let nuevoString = "\n" +
+                        "\n- Paciente con DNI: " + this.ArrayPacientes[i].DNI +
+                        "\nNombre: " + this.ArrayPacientes[i].nombre +
+                        "\nEnfermedad: " + this.ArrayPacientes[i].enfermedad;
+                    respuesta = respuesta + nuevoString;
+                    i++;
+                }
+                alert(respuesta);
+            }
+
+            //Dar de alta a un paciente, 
+            //borrandolo del array de pacientes
+            altaPaciente(DNI) {
+                let i = 0;
+                while (i < this.ArrayPacientes.length) {
+
+                    if (this.ArrayPacientes[i].DNI == DNI) {
+                        this.ArrayPacientes.splice(i, 1);
+                        alert("Se ha dado de alta al paciente.");
+                    }
+                    i++;
+                }
+            }
+        }
+
+        //Muestra el menu del hospital
+        function funcionesMenu() {
+            let hospital = new Hospital("Milagros", "Sevilla", 10);
+            let menu = "";
+
+            let idVuelo = 0;
+            while (menu != "c") {
+                menu = (prompt("Hospital " + hospital.nombre + ": \n" +
+                    "a) Mostrar pacientes.\n" +
+                    "b) Dar de alta paciente.\n" +
+                    "c) Finalizar proceso.")).toString();
+                switch (menu) {
+                    case "a":
+                        hospital.mostrarPacientes();
+                        break;
+                    case "b":
+                        let DNI = (prompt("Dar de alta al paciente con el dni:")).toString();
+                        hospital.altaPaciente(DNI);
+                        break;
+                }
+
+            }
+        }
+
+        funcionesMenu();
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

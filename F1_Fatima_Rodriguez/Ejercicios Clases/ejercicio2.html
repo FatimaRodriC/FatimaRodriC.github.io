@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        class Vuelo {
+            constructor(codigo, hora_llegada, hora_salida) {
+                this.codigo = codigo;
+                this.hora_llegada = hora_llegada;
+                this.hora_salida = hora_salida;
+            }
+        }
+
+
+        class Aeropuerto {
+            constructor(nombre, ciudad, numeroVuelosDiarios) {
+                this.nombre = nombre;
+                this.ciudad = ciudad;
+                this.ArrayVuelos = new Array();
+
+                //Crea vuelos desde el constructor
+                for (let i = 0; i < numeroVuelosDiarios; i++) {
+                    this.ArrayVuelos[i] = new Vuelo(i, 19.30, 18.30);
+                    this.ArrayVuelos[(i + 1)] = new Vuelo((i + 1), 20.30, 19.30);
+                    this.ArrayVuelos[(i + 2)] = new Vuelo((i + 2), 21.30, 20.30);
+                    i++;
+                    i++;
+                }
+            }
+
+           
+
+            
+            //Modifica la hora de llegada inroducida en el vuelo especificado
+            modificarHoraLlegada(idVuelo, horaLlegada) {
+                let i = 0;
+
+                while (i < this.ArrayVuelos.length) {
+                    if (this.ArrayVuelos[i].codigo == idVuelo) {
+
+                        this.ArrayVuelos[i].hora_llegada = horaLlegada;
+                        alert("La hora de llegada del vuelo " + this.ArrayVuelos[i].codigo + " a sido establecida.");
+                    }
+                    i++;
+                }
+            }
+
+            //Modifica la hora de salida inroducida en el vuelo especificado
+            modificarHoraSalida(idVuelo, horaSalida) {
+                let i = 0;
+
+                while (i < this.ArrayVuelos.length) {
+                    if (this.ArrayVuelos[i].codigo == idVuelo) {
+
+                        this.ArrayVuelos[i].hora_salida = horaSalida;
+                        alert("La hora de llegada del vuelo " + this.ArrayVuelos[i].codigo + " a sido establecida a " + this.ArrayVuelos[i].hora_salida);
+                    }
+                    i++;
+                }
+            }
+
+            //Muestra todos los vuelos guardados en el ArrayVuelos
+            mostrarVuelos() {
+                let i = 1;
+                let respuesta = "Los vuelos son: \n" +
+                    "- El vuelo con el id: " + this.ArrayVuelos[0].codigo +
+                    " con hora de salida: " + this.ArrayVuelos[0].hora_salida +
+                    " con hora de llegada: " + this.ArrayVuelos[0].hora_llegada;
+
+                        
+                
+                while (i < this.ArrayVuelos.length) {
+                    let nuevoString = "\n- El vuelo con el id: " + this.ArrayVuelos[i].codigo +
+                        " con hora de salida: " + this.ArrayVuelos[i].hora_salida +
+                        " con hora de llegada: " + this.ArrayVuelos[i].hora_llegada ;
+                    respuesta = respuesta + nuevoString;
+                    i++;
+                }
+                alert(respuesta);
+            }
+
+            //Comprueba que la hora de salida sea antes que la de llegada
+            comprobarHoras() {
+                let i = 0;
+                while (i < this.ArrayVuelos.length) {
+
+                    if (this.ArrayVuelos[i].hora_salida > this.ArrayVuelos[i].hora_llegada) {
+                        alert("La hora de salida del vuelo " + this.ArrayVuelos[i].codigo + " no es posterior a la hora de llegada.")
+                    }
+                    i++;
+                }
+                alert("Las horas de los vuelos estan bien establecidas.")
+
+            }
+
+
+        }
+
+        //Muestra el menu
+        function funcionesMenu() {
+            let aeropuerto = new Aeropuerto("Sur", "Sevilla", 10);
+            let menu = "";
+
+            let idVuelo = 0;
+
+            while (menu != "e") {
+                menu = (prompt("Que quiere hacer con el vuelo?: \n" +
+                    "a) Modificar la hora de llegada.\n" +
+                    "b) Modificar la hora de salida. \n" +
+                    "c) Mostrar vuelos. \n" +
+                    "d) Combrobar que la hora de salida es posterior a la de llegada.\n" +
+                    "e) Finalizar procedimiento.")).toString();
+                switch (menu) {
+                    case "a":
+                        idVuelo = parseInt(prompt("De que vuelo quiere cambiar la hora de llegada: "));
+                        let horaLlegada = parseFloat(prompt("Que hora de llegada quiere establecer: "));
+                        aeropuerto.modificarHoraLlegada(idVuelo, horaLlegada);
+
+                        break;
+                    case "b":
+                        idVuelo = parseInt(prompt("De que vuelo quiere cambiar la hora de salida: "));
+                        let horaSalida = parseFloat(prompt("Que hora de salida quiere establecer: "));
+                        aeropuerto.modificarHoraSalida(idVuelo, horaSalida);
+
+                        break;
+                    case "c": {
+                        aeropuerto.mostrarVuelos();
+                        break;
+                    }
+                    case "d":
+                        aeropuerto.comprobarHoras();
+                        break;
+
+
+                }
+            }
+        }
+        funcionesMenu();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

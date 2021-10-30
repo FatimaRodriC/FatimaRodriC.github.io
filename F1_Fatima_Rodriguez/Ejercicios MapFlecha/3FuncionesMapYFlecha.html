@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+            
+
+            let ciudades= new Map([
+                ["Cadiz", 30000],
+                ["Sevilla", 40000],
+                ["Cordoba", 50000],
+            ]);
+            
+           
+            let num=0;
+            let result=0;
+          
+            function mostrarCantidad () {
+                return alert(ciudades.size);
+            }
+
+            function borrarCiudad(){
+                let borrar = prompt("Que ciudad borro?");
+                ciudades.delete(borrar);
+            }
+
+            function  generarCiudad(){
+               let mostrar = prompt("Que ciudad quiere mostrar?:")
+                return alert("Tiene " + ciudades.get(mostrar) + " habitantes.");
+                
+            }
+
+            function anadirCiudad(){
+                let nombre = prompt("Que ciudad quiere añadir?:");
+                let poblacion = prompt("Que poblacion tiene?:");
+                ciudades.set(nombre, poblacion);
+                return alert("Se ha añadido la ciudad "+ nombre + " y tiene " + poblacion + " habitantes");
+            }
+            
+            
+   
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Borrar ciudad" onclick="borrarCiudad()"></input>
+        <input type="button" value="Cantidad ciudades" onclick="mostrarCantidad()"></input>
+        <input type="button" value="Mostrar ciudades" onclick="generarCiudad()"></input>
+        <input type="button" value="Añadir ciudad" onclick="anadirCiudad()"></input>
+    </body>
+</html>
