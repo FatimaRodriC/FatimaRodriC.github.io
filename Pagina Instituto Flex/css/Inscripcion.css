@@ -1,0 +1,164 @@
+@media (max-width: 800px) {
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+@font-face {
+    font-family: "Palantino Linotype";
+    src: url("Tipografia/palatino-linotype.ttf");
+}
+
+body{
+    background-image: url("./imagenes/fondo.png");
+    background-size: cover;
+}
+
+  * {
+    box-sizing: border-box;
+  }
+
+header{
+    display: flex;
+    padding: 20px;
+    
+}
+
+header h1{
+    font-size: 70px;
+    color: black;
+    font-family: 'Palantino Linotype';
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    height: 450px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    
+}
+
+aside div{
+    border: black 1px solid;
+    height: 575px;
+    width: 431px;
+    border-color: rgb(0,0,0, 0.2);
+}
+
+#menu button{
+    background-color: rgb(172,242,229, 0.5);
+    text-align: center;
+    border: black 1px solid;
+    font-size: 2vw;
+    border-color: rgb(0,0,0, 0.2);
+    padding: 10px;
+}
+
+
+
+section{
+    display: flex;
+    border: 3px solid;
+    background-color: rgb(172,242,229, 0.3);
+    border-color: rgb(0,0,0, 0.05);
+    margin-left: 30px;  
+    padding: 20px;
+}
+
+article h2{
+    font-family: 'Palantino Linotype';
+    font-size: 60px;
+    font-style: italic;
+}
+
+section article p {
+    font-size: 30px;
+}
+
+
+.login{
+    background-color: rgb(9, 255, 255, 0.37);
+    margin-top: 15px;
+    font-size: 35px;
+    font-style: italic;
+    font-family: 'Palantino Linotype';
+}
+
+.inscripcion{
+    background-color: rgb(145, 238, 221, 0.8);
+    margin-top: 15px;
+    font-size: 35px;
+    font-style: italic;
+    font-family: 'Palantino Linotype';
+    padding: 10px;
+}
+
+.filtro{
+    background-color: paleturquoise;
+    font-size: 35px;
+    margin-top: 15px;
+    font-family: 'Palantino Linotype';
+    font-style: italic;
+    padding: 10px;
+}
+
+#botones{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    
+}
+
+.menuYseccion{
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    
+}
+
+
+.logo{ 
+    width: 180px;
+    height: 150px;    
+    border-radius: 100%;
+}
+
+.iconos{
+    display: flex;
+}
+
+.instagram{
+    width: 50px;
+    height: 50px;
+}
+
+.twitter{
+    width: 50px;
+    height: 50px;
+}
+
+
+footer{
+    display: flex;
+    background-color: rgb(172,242,229, .2);
+    width: auto;
+    height: 120px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+#pie {
+    display: flex;
+    border: black solid 1px;
+    background-color: rgb(172,242,229, .2);
+    
+    border-color: rgb(0,0,0, 0.05);
+    font-size: 1vw;
+   
+}
+#pie img{
+    width: 650px;
+    height: 150px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header id="cabecera"><h1>IES Mar de Cádiz</h1>
+            <div class="iconos">
+            <img src="css/imagenes/instagram.png" class="instagram">   
+            <img src="css/imagenes/twitter.png" class="twitter"> 
+                <img src="css/imagenes/logoVacio.png" class="logo">
+            </div>
+        </header>
+        
+        <div class="menuYseccion">
+        <aside id="menu">
+            <button onclick="location.href='Horario.html'">Horarios</button>
+            <button onclick="location.href='#'">Galería</button>
+            <button onclick="location.href='#'">Visita Virtual</button>
+            <button onclick="location.href='#'">Biblioteca</button>
+            <button onclick="location.href='#'">Ofertas educativas</button>
+            <button onclick="location.href='#'">Departamentos</button>
+        </div>
+        
+        <article id="articulo">
+            <h2>Inscripción a Actividades Extraescolares</h2>
+            <form action="ejemplo.php" method="get">
+                <p>Nombre: <input type="text" name="nombre" size="40"></p>
+                <p>Apellidos:
+  <input type="text" name="apellidos" size="40" placeholder="Escriba sus dos apellidos">
+</p>
+                <p>Año de nacimiento: <input type="number" name="nacido" min="1950"></p>
+
+                <p>Sexo:
+                  <input type="radio" name="hm" value="h"> Hombre
+                  <input type="radio" name="hm" value="m"> Mujer
+                </p>
+                <p>¿En que Actividad quiere inscribirse? 
+                <select name="menu">
+                    <option selected>...</option>
+                    <optgroup label="Deportivas">
+                      <option value="1">Futbol</option>
+                      <option value="2">Gimnasia Rítmica</option>
+                      <option value="3">Ajedrez</option>
+                    </optgroup>
+                    <optgroup label="Artística">
+                      <option value="4">Teatro</option>
+                      <option value="5">Pintura</option>
+                      <option value="6">Música</option>
+                    </optgroup>
+                    <optgroup label="Académicas">
+                        <option value="7">Lectura</option>
+                        <option value="8">Informática</option>
+                      </optgroup>
+                  </select>
+                </p>
+                <p>
+                Indique el nivel que dispone en esta actividad<br>(Regular, Bueno, Muy Bueno):
+                <input type="range" name="rango"
+                    min="1" max="3" list="lista-rango">
+                    <datalist id="lista-rango">
+                        <option value="1" label="Malo">
+                        <option value="2" label="Regular">
+                        <option value="3" label="Bueno">
+                </p>
+                <p>
+                  <input type="submit" value="Enviar">
+                  <input type="reset" value="Borrar">
+                </p>
+              </form>
+        </article>
+
+        <div id="botones">
+            <button class="login" onclick="location.href='Inscripcion.html'">Inicio Sesión</button>
+            <button class="inscripcion">Inscripción Extraescolares</button>
+            <button class="filtro">Filtro para daltonicos</button>
+        </div>
+
+        <footer id="pie"><img src="css/imagenes/directiva.PNG">
+            <div><p>IES Mar de Cádiz. Avenida de Rafael Alberti s/n.<br>
+                 El Puerto de Santa María. Tfn:956243128</p></div></footer>
+      </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Palantino Linotype";
+    src: url("Tipografia/palatino-linotype.ttf");
+}
+body{
+    background-image: url("./imagenes/fondo.png");
+    background-size: cover;
+}
+
+  
+
+.iconos{
+    display: flex;
+}
+
+.logo{ 
+    width: 80%;
+    height: 30%;    
+    border-radius: 100%;
+}
+
+
+.instagram{
+    width: 50px;
+    height: 50px;
+}
+
+.twitter{
+    width: 50px;
+    height: 50px;
+}
+
+header{
+    display: flex;
+    padding: 20px;
+    flex-flow: row;
+    
+}
+
+header h1{
+    font-size: 3vw;
+    color: black;
+    font-family: 'Palantino Linotype';
+}
+
+
+
+
+#menu button{
+    background-color: rgb(172,242,229, 0.5);
+    text-align: center;
+    border: black 1px solid;
+    font-size: 2vw;
+    border-color: rgb(0,0,0, 0.2);
+    padding: 10px;
+}
+
+
+.menuYseccion{
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    
+}
+
+section{
+    display: flex;
+    border: 3px solid;
+    background-color: rgb(172,242,229, 0.3);
+    border-color: rgb(0,0,0, 0.05);
+    margin-left: 30px;  
+    padding: 20px;
+}
+    .contenedor {
+       display: grid; 
+                    
+       grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+       
+       gap: 0px;
+       height: 100%;
+       
+    }
+      
+    #cabecera {
+    
+       
+       grid-row: 1 / 2;
+       grid-column: 1 / 6;
+       
+    }
+    #menu {
+
+    display: flex;
+    flex-direction: column;
+    
+    height: 450px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+       
+       grid-row: 2 / 4;
+       grid-column: 1 / 2;
+       
+    }
+
+    #articulo {
+       
+    border: 3px solid;
+    background-color: rgb(172,242,229, 0.3);
+    border-color: rgb(0,0,0, 0.05);
+    margin-left: 30px;  
+    padding: 30px;
+    
+        grid-row: 2 / 4;
+        grid-column: 2 / 5;
+
+    }
+
+    #articulo h2{
+    font-family: 'Palantino Linotype';
+    font-size: 4vw;
+    font-style: italic;
+    }
+
+    #articulo p{
+        font-size: 2vw;
+    }
+
+    #articulo img{
+        width: 1050px;
+        height: 650px;
+    }
+
+    #botones {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+       
+       grid-row: 2 / 4;
+       grid-column: 5 / 6;
+       
+    }
+
+    #botones button{
+    font-size: 2vw;
+    margin-top: 15px;
+    font-family: 'Palantino Linotype';
+    font-style: italic;
+    padding: 10px;
+    }
+    
+    .login{
+        background-color: rgb(9, 255, 255, 0.37);
+    }
+    
+    .inscripcion{
+        background-color: rgb(145, 238, 221, 0.8);
+    }
+    
+    .filtro{
+        background-color: paleturquoise;
+    }    
+    
+    #pie {
+        display: flex;
+        border: black solid 1px;
+        background-color: rgb(172,242,229, .2);
+        
+        border-color: rgb(0,0,0, 0.05);
+        font-size: 1vw;
+
+       grid-row: 4 / 5;
+       grid-column: 1 / 6;
+       
+    }
+
+    #pie img{
+        width: 650px;
+        height: 150px;
+    }
