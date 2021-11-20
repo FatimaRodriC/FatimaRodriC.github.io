@@ -1,0 +1,16 @@
+.cara{
+    background-color: gray;
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    display: flex;
+    
+}
+
+.num{
+    display: flex;
+    color: white;
+    font-size: 40px;
+    justify-content: center;
+    align-self: center;
+}

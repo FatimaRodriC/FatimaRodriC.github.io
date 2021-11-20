@@ -1,0 +1,38 @@
+.cabezado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.cabezado h1{
+    align-self: center;
+}
+
+.cabezado p{
+    align-self: center;
+}
+
+nav{
+    width: 25%;
+}
+
+nav ul{   
+    list-style: none;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+}
+
+.Imagen1{
+    width: 150px;
+    height: 150px;
+}
+
+.Imagen2{
+    width: 150px;
+    height: 150px;
+}
+
