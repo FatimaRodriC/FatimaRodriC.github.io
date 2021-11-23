@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="d-inline-flex flex-row justify-content-around align-items-center">
+            <h1 class="display-1">IES Mar de Cádiz</h1>
+            <div class="d-inline-flex flex-row justify-content-around align-items-center badge" id="iconos">
+                
+                <div class="row">
+                    <img src="imagenes/instagram.png" id="instagram">   
+                </div>
+                
+                <div class="row">
+                    <img src="imagenes/twitter.png" id="twitter"> 
+                </div>
+                <div class="row">
+                    <img src="imagenes/logoVacio.png" id="logo">
+                </div>
+            </div>
+        </header>
+        
+        <div class="row">
+        <aside class="d-inline-flex flex-column justify-content-center align-items-center" id="menu">
+            <button class="badge" onclick="location.href='Horario.html'">Horarios</button>
+            <button class="badge" onclick="location.href='#'">Galería</button>
+            <button class="badge" onclick="location.href='#'">Visita Virtual</button>
+            <button class="badge" onclick="location.href='#'">Biblioteca</button>
+            <button class="badge" onclick="location.href='#'">Ofertas educativas</button>
+            <button class="badge" onclick="location.href='#'">Departamentos</button>
+            </aside>
+        
+        <section class="col-md-6">
+        <article class="row" id="articulo"><h2 class="display-3">Noticias</h2><p>
+            2021-10-24 El próximo <b>10 de noviembre</b> comienza el 
+            <b>Curso de Especialización en Ciberseguridad</b>
+             en Entornos de las Tecnologías de la Información.</p>
+            <img src="imagenes/Ciberseguridad.png"></article>
+        </section>
+    
+        <div class="col-sm-3" id="botones">
+            <button class="row" id="login">Inicio Sesión</button>
+            <button class="row" id="inscripcion" onclick="location.href='Inscripcion.html'">Inscripción Extraescolares</button>
+            <button class="row" id="filtro">Filtro para daltonicos</button>
+        </div>
+    </div>
+
+        <footer class="row" id="pie"><img src="imagenes/directiva.PNG">
+            <div><p>IES Mar de Cádiz. Avenida de Rafael Alberti s/n.<br>
+                 El Puerto de Santa María. Tfn:956243128</p></div></footer>
+      </div>
+</body>
+</html>
