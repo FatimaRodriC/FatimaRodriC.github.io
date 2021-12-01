@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="d-inline-flex flex-row justify-content-around align-items-center">
+            <h1 class="display-1">IES Mar de Cádiz</h1>
+            <div class="d-inline-flex flex-row align-items-center" id="iconos">
+                
+              <div class="badge">
+                  <img src="imagenes/instagram.png" id="instagram">   
+              </div>
+              
+              <div class="badge">
+                  <img src="imagenes/twitter.png" id="twitter"> 
+              </div>
+              <div class="badge">
+                  <img src="imagenes/logoVacio.png" id="logo">
+              </div>
+          </div>
+
+          <div class="botones">
+              <button class="btn btn-outline-dark me-2 badge" id="login" onclick="location.href='inicio_Sesion.html'">Inicio Sesión</button>
+              <button class="btn btn-outline-dark me-2 badge" id="inscripcion" onclick="location.href='Inscripcion.html'">Inscripción Extraescolares</button>
+              <button class="btn btn-outline-dark me-2 badge" id="filtro">Filtro para daltonicos</button>
+            </div>
+        </header>
+        
+        <div class="row">
+        <aside class="d-inline-flex flex-column justify-content-center align-items-center" id="menu">
+            <button class="badge" onclick="location.href='Horario.html'">Horarios</button>
+            <button class="badge" onclick="location.href='#'">Galería</button>
+            <button class="badge" onclick="location.href='#'">Visita Virtual</button>
+            <button class="badge" onclick="location.href='#'">Biblioteca</button>
+            <button class="badge" onclick="location.href='#'">Ofertas educativas</button>
+            <button class="badge" onclick="location.href='#'">Departamentos</button>
+            <button class="badge" onclick="location.href='index.html'">Inicio</button>
+            </aside>
+        
+        
+            <form class="d-inline-flex flex-column justify-content-around " style="margin: 35px;">
+                <div class="form-row" >
+                    <div class="col-md-4 mb-3">
+                      <label for="validationServer01">Nombre</label>
+                      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Escriba su nombre" required>
+                      <div class="valid-feedback">
+                        
+                      </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationServer02">Apellido</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Escriba su primer apellido" required>
+                        <div class="valid-feedback">
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3" >
+                        <label for="validationServerEmail">Correo Electronico</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                          </div>
+                          <input type="email" class="form-control is-invalid" id="inputEmail" placeholder="Escriba su correo corporativo"  required>
+                          <div class="invalid-feedback">
+                            Escriba su correo electronico.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label for="validationServer03">Ciudad</label>
+                          <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Ciudad de residencia" required>
+                          <div class="invalid-feedback">
+                            Por favor ponga una ciudad valida.
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label for="validationServer01">Nombre</label>
+                          <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Escriba su nombre" required>
+                          <div class="valid-feedback">
+                            
+                          </div>
+                          </div>
+                        <div class="col-md-3 mb-3">
+                          <p>
+                            <label for="customRange2" class="form-label">Indique el nivel que dispone en esta actividad (Regular, Bueno, Muy Bueno):</label>
+                            <input type="range" class="form-range" min="0" max="5" id="customRange2">
+                            </p>
+                        </div>
+                        
+                      </div>
+                      <p>
+                          <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01" >En que Actividad quiere apuntarse?</label>
+                            <select class="form-select" id="validationCustom04" required>
+                              <option selected disabled value="">Elige Actividad</option>
+                              
+                              <optgroup label="Deportivas">
+                                <option value="1">Futbol</option>
+                                <option value="2">Gimnasia Rítmica</option>
+                                <option value="3">Ajedrez</option>
+                              </optgroup>
+                              <optgroup label="Artística">
+                                <option value="4">Teatro</option>
+                                <option value="5">Pintura</option>
+                                <option value="6">Música</option>
+                              </optgroup>
+                              <optgroup label="Académicas">
+                                  <option value="7">Lectura</option>
+                                  <option value="8">Informática</option>
+                                </optgroup>
+                              
+                            </select>
+                            
+                          </div>
+                        </p>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox"  id="invalidCheck3">
+                          <label class="form-check-label">
+                            Marque la casilla si quiere recibir un correo con los detalles de la actividad seleccionada
+                          </label>
+                          
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                    <input class="btn btn-primary" type="reset" value="Borrar"><br><br>
+                    <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+                    </div>
+            </form>
+    
+        
+
+        <footer class="row" id="pie"><img src="imagenes/directiva.PNG">
+            <div><p>IES Mar de Cádiz. Avenida de Rafael Alberti s/n.<br>
+                 El Puerto de Santa María. Tfn:956243128</p></div></footer>
+      </div>
+</body>
+</html>
